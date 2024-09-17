@@ -30,3 +30,15 @@ CREATE DATABASE bookly_db;
 ```bash
 DROP TABLE books;
 ```
+## Alembic
+```bash
+alembic init -t async migrations
+```
+### Creamos migraciones
+```bash
+alembic revision --autogenerate -m "init"
+```
+### Ejecutamos las migraciones
+```bash
+alembic upgrade head
+```
