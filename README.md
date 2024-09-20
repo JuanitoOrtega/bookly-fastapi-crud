@@ -42,3 +42,7 @@ alembic revision --autogenerate -m "init"
 ```bash
 alembic upgrade head
 ```
+### Al cambiar una columna de un modelo
+```bash
+alembic revision --autogenerate -m "add password hash"
+```
