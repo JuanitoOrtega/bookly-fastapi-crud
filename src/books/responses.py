@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional
 from datetime import date, datetime
+import uuid
 
 
 class BaseResponse(BaseModel):
@@ -9,8 +10,8 @@ class BaseResponse(BaseModel):
         arbitrary_types_allowed = True
 
 
-class BookResponseModel(BaseModel):
-    uid: str
+class BookResponse(BaseModel):
+    uid: uuid.UUID
     title: str
     author: str
     publisher: str
